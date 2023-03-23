@@ -40,13 +40,13 @@ plot_opts = {"mincurv_curv_lin": False,         # plot curv. linearization (orig
 # select track file (including centerline coordinates + track widths) --------------------------------------------------
 # file_paths["track_name"] = "rounded_rectangle"                              # artificial track
 # file_paths["track_name"] = "handling_track"                                 # artificial track
-file_paths["track_name"] = "berlin_2018"                                    # Berlin Formula E 2018
+file_paths["track_name"] = "waypoints1"                                  # Berlin Formula E 2018
 # file_paths["track_name"] = "modena_2019"                                    # Modena 2019
 
 # set import options ---------------------------------------------------------------------------------------------------
 imp_opts = {"flip_imp_track": False,                # flip imported track to reverse direction
             "set_new_start": False,                 # set new starting point (changes order, not coordinates)
-            "new_start": np.array([0.0, -47.0]),    # [x_m, y_m]
+            "new_start": np.array([0.0, 0.0]),    # [x_m, y_m]
             "min_track_width": None,                # [m] minimum enforced track width (set None to deactivate)
             "num_laps": 1}                          # number of laps to be driven (significant with powertrain-option),
                                                     # only relevant in mintime-optimization
@@ -77,8 +77,8 @@ mintime_opts = {"tpadata": None,
 lap_time_mat_opts = {"use_lap_time_mat": False,             # calculate a lap time matrix (diff. top speeds and scales)
                      "gg_scale_range": [0.3, 1.0],          # range of gg scales to be covered
                      "gg_scale_stepsize": 0.05,             # step size to be applied
-                     "top_speed_range": [100.0, 150.0],     # range of top speeds to be simulated [in km/h]
-                     "top_speed_stepsize": 5.0,             # step size to be applied
+                     "top_speed_range": [1.0, 5.0],     # range of top speeds to be simulated [in km/h]
+                     "top_speed_stepsize": 0.1,             # step size to be applied
                      "file": "lap_time_matrix.csv"}         # file name of the lap time matrix (stored in "outputs")
 
 # ----------------------------------------------------------------------------------------------------------------------
