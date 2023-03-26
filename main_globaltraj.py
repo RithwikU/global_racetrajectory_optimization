@@ -23,7 +23,7 @@ This script has to be executed to generate an optimal trajectory based on a give
 # ----------------------------------------------------------------------------------------------------------------------
 
 # choose vehicle parameter file ----------------------------------------------------------------------------------------
-file_paths = {"veh_params_file": "racecar.ini"}
+file_paths = {"veh_params_file": "f1tenth.ini"}
 
 # debug and plot options -----------------------------------------------------------------------------------------------
 debug = True                                    # print console messages
@@ -40,12 +40,12 @@ plot_opts = {"mincurv_curv_lin": False,         # plot curv. linearization (orig
 # select track file (including centerline coordinates + track widths) --------------------------------------------------
 # file_paths["track_name"] = "rounded_rectangle"                              # artificial track
 # file_paths["track_name"] = "handling_track"                                 # artificial track
-file_paths["track_name"] = "waypoints1"                                  # Berlin Formula E 2018
+file_paths["track_name"] = "waypoints_center2"                                  # Berlin Formula E 2018
 # file_paths["track_name"] = "modena_2019"                                    # Modena 2019
 
 # set import options ---------------------------------------------------------------------------------------------------
 imp_opts = {"flip_imp_track": False,                # flip imported track to reverse direction
-            "set_new_start": False,                 # set new starting point (changes order, not coordinates)
+            "set_new_start": True,                 # set new starting point (changes order, not coordinates)
             "new_start": np.array([0.0, 0.0]),    # [x_m, y_m]
             "min_track_width": None,                # [m] minimum enforced track width (set None to deactivate)
             "num_laps": 1}                          # number of laps to be driven (significant with powertrain-option),
